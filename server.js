@@ -13,7 +13,7 @@ app.use(cors());
 app.use(express.json());
 
 // ✅ Connect to MongoDB
-const MONGO_URI = process.env.MONGO_URI || "mongodb+srv://ojtjewell:ojtjewell28@ojt.p18ku.mongodb.net/?retryWrites=true&w=majority&appName=OJT";
+const MONGO_URI = process.env.MONGO_URI;
 mongoose.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log("✅ Connected to MongoDB"))
   .catch(err => console.error("❌ MongoDB Connection Error:", err));
